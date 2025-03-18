@@ -1,0 +1,12 @@
+[tools]
+terraform = "1.11.1"
+terraform-docs = "0.19.0"
+tflint = "0.55.1"
+
+[tasks."terraform:validate"]
+description = "Validates the Terraform files"
+run = "terraform -chdir=terraform validate"
+
+[tasks."terraform:format"]
+description = "Formats the Terraform files"
+run = "terraform -chdir=terraform fmt"
